@@ -126,8 +126,11 @@ def main():
             testing = open('myfile.txt', 'r')
 
             if testing.mode == 'r':
-                content = testing.read()
-                print(content)
+                # content = testing.read()
+                # print(content)
+                fl = testing.readlines()
+                for x in fl:
+                    print(x)
 
         def chooseAction(action):
             if action == 'read':
