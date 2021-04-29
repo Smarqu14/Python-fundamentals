@@ -9,20 +9,26 @@ import time
 
 
 def main():
-  # Print the name of the OS
+    # Print the name of the OS
+    # print(os.name)
+    # Check for item existence and type
+    # print("Item exists: " + str(path.exists("myfile.txt")))
+    # print("Item is a file: " + str(path.isfile("myfile.txt")))
+    # print("Item is a directory: " + str(path.isdir("myfile.txt")))
 
-  
-  # Check for item existence and type
+    # Work with file paths
+    # print("item path: " + str(path.realpath("myfile.txt")))
+    # print("Item path and name:" + str(path.split(path.realpath("myfile.txt"))))
 
-  
-  # Work with file paths
+    # Get the modification time
+    t = time.ctime(path.getmtime("myfile.txt"))
+    # print(t)
+    # print(datetime.datetime.fromtimestamp(path.getmtime("myfile.txt")))
+    # Calculate how long ago t he item was modified
+    td = datetime.datetime.now() - datetime.datetime.fromtimestamp(path.getmtime('myfile.txt'))
+    print('it has been' + str(td) + 'since the file was modified')
+    print("or," + str(td.total_seconds()) + "second")
 
-  
-  # Get the modification time
 
-  
-  # Calculate how long ago the item was modified
-
-  
-if __name__ == "__main__":
-  main()
+if __name__ == "__main__": 
+    main()
