@@ -30,5 +30,5 @@ def main():
     print("or," + str(td.total_seconds()) + "second")
 
 
-if __name__ == "__main__": 
+if __name__ == "__main__":
     main()
